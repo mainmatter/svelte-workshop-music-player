@@ -1,6 +1,9 @@
 import { expect, test } from '@playwright/test';
 
-test('index page has expected h1', async ({ page }) => {
+test('visiting / renders the index page', async ({ page }) => {
 	await page.goto('/');
-	await expect(page.getByRole('heading', { name: 'Welcome to SvelteKit' })).toBeVisible();
+
+	await expect(page).toHaveURL('/')
+	await expect(page.locator('[data-testId="select-album-btn"]')).toHaveCount(2);
+	await expect(page.locator('[data-testId="song"]')).toHaveCount(20);
 });
