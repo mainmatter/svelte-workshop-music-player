@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply h-screen bg-gray-50;
+
+	font-family: system-ui, sans-serif;
+}
+
+.page-content {
+	@apply p-8;
+}
+
+.page-title {
+	@apply mb-8;
+
+	font-size: 48px;
+}
