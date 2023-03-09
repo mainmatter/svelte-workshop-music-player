@@ -13,7 +13,11 @@ const config = {
 			'@utils': path.resolve('./src/utils'),
 		},
 	},
-	preprocess: vitePreprocess()
+	preprocess: vitePreprocess({
+		style: {
+			postcss: true,
+		},
+	})
 };
 
 export default config;
