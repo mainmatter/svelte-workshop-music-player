@@ -1,30 +1,21 @@
 <script>
-	import { formatDuration } from '@utils/format-duration';
-
-	export let data;
-	export let { songs } = data;
+	import { songs } from '@store';
 </script>
 
-<h1>Library</h1>
 <div class="list-group">
-	{#each songs as album}
+	{#each $songs as song}
 		<div class="list-group-item">
 			<div class="row">
 				<div class="col">
 					<h4 class="h4">
-						{album.title}
+						{song.title}
 					</h4>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-3">
-					<img
-						src={album.coverUrl}
-						width="100%"
-						class="rounded"
-						alt="Album cover of {album.title}"
-					/>
+					<img src={song.coverUrl} width="100%" class="rounded" alt="Album cover of {song.title}" />
 				</div>
 			</div>
 		</div>
