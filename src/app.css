@@ -1,3 +1,19 @@
+@import url('https://fonts.cdnfonts.com/css/apple-garamond');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply h-screen bg-slate-100;
+}
+
+.page-content {
+  @apply p-8;
+}
+
+.page-title {
+  @apply mb-8;
+  font-family: 'Apple Garamond Light', sans-serif;
+  font-size: 48px;
+}

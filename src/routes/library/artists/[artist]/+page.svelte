@@ -1,1 +1,1 @@
-<h1>Artist</h1>
+<h2>Artist</h2>

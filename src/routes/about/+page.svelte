@@ -1,1 +1,3 @@
-<h1>About</h1>
+<div class="page-content">
+	<h1 class="page-title">About</h1>
+</div>

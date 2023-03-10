@@ -1,5 +1,6 @@
 import { writable, derived } from 'svelte/store';
 
+export const nowPlaying = writable(null);
 export const songs = writable(null);
 
 export const artists = derived(

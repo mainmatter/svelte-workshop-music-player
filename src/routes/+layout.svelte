@@ -3,8 +3,10 @@
 	import '../app.css';
 </script>
 
-<PrimaryNav />
+<div class="h-screen grid grid-rows-[auto_1fr]">
+	<div class="relative h-14">
+		<PrimaryNav />
+	</div>
 
-<hr />
-
-<slot />
+	<slot />
+</div>

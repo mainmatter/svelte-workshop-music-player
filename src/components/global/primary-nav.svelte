@@ -1,5 +1,5 @@
-<nav class="sticky top-0 z-50 bg-gray-800 text-gray-200">
-	<div class="flex mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+<nav class="h-14 w-full fixed top-0 z-50 bg-gray-800/90 backdrop-blur text-gray-200">
+	<div class="flex px-4">
 		<ul class="flex nav-list">
 			<li>
 				<a href="/">Svelte Music</a>
