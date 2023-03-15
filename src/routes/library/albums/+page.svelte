@@ -1,6 +1,9 @@
 <script>
+	import Breadcrumb from '@components/breadcrumbs/breadcrumb.svelte';
 	import { albums } from '@store';
 </script>
+
+<Breadcrumb title="Albums" href="/library/albums" />
 
 <div class="page-content">
 	<h1 class="page-title">Albums</h1>
