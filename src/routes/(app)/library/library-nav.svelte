@@ -1,6 +1,7 @@
 <script>
 	import NowPlaying from './now-playing.svelte';
 	import LibraryNavItem from './library-nav-item.svelte';
+	import { nowPlaying } from '@store';
 </script>
 
 <div class="flex flex-col justify-between h-full">
@@ -12,5 +13,7 @@
 		</ul>
 	</nav>
 
-	<NowPlaying />
+	{#if $nowPlaying}
+		<NowPlaying />
+	{/if}
 </div>
