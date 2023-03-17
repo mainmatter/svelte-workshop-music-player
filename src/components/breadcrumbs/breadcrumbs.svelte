@@ -2,16 +2,13 @@
 	import { pages, currentTitle } from './breadcrumbs';
 	import Chevron from './chevron.svelte';
 	import { page } from '$app/stores';
-
-	let className;
-	export { className as class };
 </script>
 
 <svelte:head>
 	<title>{$currentTitle}</title>
 </svelte:head>
 
-<nav class="flex {className}" aria-label="Breadcrumb">
+<nav class="flex" aria-label="Breadcrumb">
 	<ol class="list">
 		{#each $pages as { title, href }, index}
 			<li class="list-item">

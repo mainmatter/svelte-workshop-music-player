@@ -1,11 +1,11 @@
 import { derived, writable } from 'svelte/store';
 
 export const pages = writable([]);
-export const currentTitle = derived(pages, ($pages) => $pages.at(-1)?.title || '');
+export const currentTitle = derived(pages, ($pages) => $pages?.at(-1)?.title || '');
 
 export function pushPage({ title, href }) {
 	pages.update(($pages) => {
-		let pageExists = $pages.some((page) => page.href === href);
+		let pageExists = $pages?.some((page) => page.href === href);
 		if (!pageExists) {
 			return [
 				...$pages,
