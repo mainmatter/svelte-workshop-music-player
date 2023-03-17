@@ -1,5 +1,6 @@
 <script>
 	import Breadcrumb from '@components/breadcrumbs/breadcrumb.svelte';
+	import SongTable from '@components/player/song-table.svelte';
 	export let data;
 </script>
 
@@ -16,6 +17,7 @@
 					{album.title}
 				</h4>
 			</div>
+			<SongTable songs={album.songs} />
 		{/each}
 	</div>
 </div>
