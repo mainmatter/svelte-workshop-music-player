@@ -2,4 +2,6 @@
 	import Breadcrumb from '@components/breadcrumbs/breadcrumb.svelte';
 </script>
 
-<Breadcrumb title="Artists" href="/artists" />
+<Breadcrumb title="Albums" href="/library/albums" />
+
+<slot />

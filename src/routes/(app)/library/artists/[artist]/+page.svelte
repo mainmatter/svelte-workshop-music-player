@@ -1,18 +1,17 @@
 <script>
 	import Breadcrumb from '@components/breadcrumbs/breadcrumb.svelte';
-	import { albums } from '@store';
+	export let data;
 </script>
 
-<Breadcrumb title="Albums" href="/library/albums" />
+<Breadcrumb title={data.artist.name} href="/library/artists/{data.artist.slug}" />
 
 <div class="page-content">
-	<h1 class="page-title">Albums</h1>
+	<h1 class="page-title">{data.artist.name}</h1>
 
 	<div class="albums">
-		{#each $albums as album}
+		{#each data.albums as album}
 			<div class="album">
 				<img src={album.coverUrl} class="cover" alt={album.title} />
-
 				<h4 class="text-center">
 					{album.title}
 				</h4>
@@ -22,11 +21,7 @@
 </div>
 
 <style lang="postcss">
-	.albums {
-		@apply grid grid-cols-4 gap-8;
-	}
-
 	.cover {
-		@apply rounded block mb-2 w-full aspect-square bg-slate-400 shadow-sm;
+		@apply rounded block mb-2 w-80 aspect-square bg-slate-400 shadow-sm;
 	}
 </style>

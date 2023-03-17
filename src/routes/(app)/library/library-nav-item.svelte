@@ -2,10 +2,13 @@
 	import { page } from '$app/stores';
 	export let href;
 	export let title;
+
+	let className;
+	export { className as class };
 </script>
 
 <li>
-	<a {href} class="link" class:active={$page.url.pathname === href}>{title}</a>
+	<a {href} class="link {className}" class:active={$page.url.pathname.includes(href)}>{title}</a>
 </li>
 
 <style lang="postcss">
