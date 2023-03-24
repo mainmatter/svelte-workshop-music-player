@@ -1,4 +1,5 @@
 <script>
+	import Layout from '@components/global/layout.svelte';
 	import LibraryNav from './library/library-nav.svelte';
 	import { songs } from '@store';
 	import Breadcrumbs from '@components/breadcrumbs/breadcrumbs.svelte';
@@ -9,17 +10,42 @@
 	$: songs.set(data.songs);
 </script>
 
-<div class="h-10 px-4 flex items-center bg-white/90 backdrop-blur">
-	<Breadcrumbs />
-	<Breadcrumb title="Library" href="/library" />
-</div>
+<Layout>
+	<svelte:fragment slot="nav">
+		<Breadcrumbs />
+		<Breadcrumb title="Library" href="/library" />
+	</svelte:fragment>
 
-<div class="grid">
-	<div class="w-56 fixed bg-slate-300 top-24 bottom-0">
-		<LibraryNav />
+	<div slot="user">
+		<a href="/">Logout</a>
 	</div>
 
-	<main class="pl-56 h-full">
-		<slot />
-	</main>
-</div>
+	<div class="layout" slot="content">
+		<div class="sidebar">
+			<LibraryNav />
+		</div>
+
+		<div class="content">
+			<slot />
+		</div>
+	</div>
+</Layout>
+
+<style lang="postcss">
+	.layout {
+		@apply grid min-h-full relative;
+
+		grid-template:
+			"nav main" 1fr / theme('width.72') 1fr
+	}
+
+	.sidebar {
+		@apply bg-zinc-600 text-white;
+
+		grid-area: nav;
+	}
+
+	.content {
+		grid-area: main;
+	}
+</style>

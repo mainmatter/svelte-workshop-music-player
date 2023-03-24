@@ -17,7 +17,8 @@
 					{album.title}
 				</h4>
 			</div>
-			<SongTable songs={album.songs} />
+			
+			<SongTable songs={album.songs} columns={['title', 'duration']} />
 		{/each}
 	</div>
 </div>

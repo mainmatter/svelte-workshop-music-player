@@ -5,12 +5,32 @@
 
 <Breadcrumb title="Artists" href="/library/artists" />
 
-<div class="grid">
-	<div class="w-56 fixed bg-slate-200 bottom-0">
+
+<div class="layout">
+	<div class="sidebar">
 		<ArtistsNav />
 	</div>
 
-	<main class="pl-56 h-full">
+	<div class="content">
 		<slot />
-	</main>
+	</div>
 </div>
+
+<style lang="postcss">
+	.layout {
+		@apply grid min-h-full;
+
+		grid-template:
+			"nav main" 1fr / theme('width.72') 1fr
+	}
+
+	.sidebar {
+		@apply bg-zinc-700 text-white;
+
+		grid-area: nav;
+	}
+
+	.content {
+		grid-area: main;
+	}
+</style>

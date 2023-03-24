@@ -1,3 +1,3 @@
-<div class="page-content">
-	<h1 class="page-title">Home</h1>
-</div>
+<section>
+	<p>Cybernetically enhanced playback</p>
+</section>

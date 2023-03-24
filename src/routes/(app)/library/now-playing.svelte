@@ -6,7 +6,7 @@
 	let isPaused = false;
 
 	$: trackId = $nowPlaying?.soundcloudTrackId;
-	$: src = `https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F${trackId}&auto_play=true&show_artwork=true`;
+	$: src = `https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F${trackId}&show_artwork=false`;
 
 	onMount(() => {
 		var widgetIframe = document.getElementById('sc-widget');
@@ -29,7 +29,7 @@
 	};
 </script>
 
-<div>
+<div class="fixed bottom-0 w-72">
 	<img src={$nowPlaying.coverUrl} alt={$nowPlaying.artist} />
 	<iframe
 		title="now-playing {$nowPlaying.artist} - {$nowPlaying.title} "

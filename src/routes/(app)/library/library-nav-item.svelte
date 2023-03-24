@@ -13,10 +13,14 @@
 
 <style lang="postcss">
 	.link {
-		@apply px-4 py-2 text-lg block;
+		@apply m-2 px-4 py-2 text-lg block rounded-md transition-colors;
 	}
 
-	.active {
-		@apply text-blue-500 font-semibold;
+	.link:hover {
+		@apply bg-zinc-700;
+	}
+
+	.active, .active:hover	{
+		@apply bg-zinc-800;
 	}
 </style>
