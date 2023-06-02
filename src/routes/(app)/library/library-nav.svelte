@@ -1,5 +1,7 @@
 <script>
+	import NowPlaying from './now-playing.svelte';
 	import LibraryNavItem from './library-nav-item.svelte';
+	import { nowPlaying } from '@store';
 </script>
 
 <nav
@@ -11,3 +13,7 @@
 		<LibraryNavItem href="/library/artists" title="Artists" />
 	</ul>
 </nav>
+
+{#if $nowPlaying?.song}
+	<NowPlaying />
+{/if}

@@ -7,7 +7,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			'@data': path.resolve('./static/data'),
+			'@store': path.resolve('./src/store'),
 			'@utils': path.resolve('./src/utils')
 		}
 	},
