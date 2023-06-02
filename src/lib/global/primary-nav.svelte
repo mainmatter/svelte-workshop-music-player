@@ -1,15 +1,20 @@
 <nav>
-	<a href="/">Sveltekit Music Player</a>
+	<ul class="flex nav-list">
+		<li>
+			<a href="/about">About</a>
+		</li>
+		<li>
+			<a href="/library">Library</a>
+		</li>
+	</ul>
 </nav>
 
 <style lang="postcss">
-	nav {
-		background-color: grey;
-		width: 100%;
-		height: 50px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 20px;
+	.nav-list {
+		@apply flex flex-row list-none gap-5;
+	}
+
+	.nav-list li {
+		@apply m-0 px-0;
 	}
 </style>
