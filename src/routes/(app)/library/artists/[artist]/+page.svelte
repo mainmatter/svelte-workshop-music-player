@@ -1,4 +1,5 @@
 <script>
+	import SongTable from '$lib/player/song-table.svelte';
 	export let data;
 </script>
 
@@ -14,9 +15,8 @@
 						</h5>
 					</div>
 				</div>
-				<pre>
-					{JSON.stringify(album, null, 2)}
-				</pre>
+
+				<SongTable songs={album.songs} columns={['title', 'album', 'duration']} />
 			</article>
 		{/each}
 	</div>
