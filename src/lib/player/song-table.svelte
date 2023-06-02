@@ -1,7 +1,9 @@
 <script>
+	import { nowPlaying } from '@store';
 	import { formatDuration } from '@utils/format-duration';
 	import { kebabCase } from 'lodash-es';
 	import play from '$lib/assets/play.svg';
+	import pause from '$lib/assets/pause.svg';
 
 	export let songs;
 	export let showCover = false;
@@ -18,6 +20,11 @@
 		album: 'Album',
 		duration: 'Duration'
 	};
+
+	const pauseSong = () =>
+		nowPlaying.update((nowPlaying) => {
+			return { ...nowPlaying, isPlaying: false };
+		});
 </script>
 
 <table class="table">
@@ -25,20 +32,39 @@
 		<tr>
 			<th>&nbsp;</th>
 			{#each columns as column}
-				<th>{columnTitles[column]}</th>
+				<th data-testid="song-table-th-{column}">{columnTitles[column]}</th>
 			{/each}
 		</tr>
 	</thead>
 	<tbody>
 		{#each songs as song}
-			<tr>
-				<td class="play">
-					<button class="play-button" type="button">
-						<img src={play} alt="Play" width="12" height="16" />
-					</button>
+			<tr data-testid="song-table-row">
+				<td class="play" data-testid="song-table-cell-controls">
+					{#if $nowPlaying?.song?.title === song.title && $nowPlaying.isPlaying}
+						<button
+							class="pause-button"
+							type="button"
+							on:click={pauseSong}
+							alt="Pause {song.title} by {song.artist}"
+							data-testid="song-table-pause-button"
+						>
+							<img src={pause} alt="Pause" width="12" height="16" />
+						</button>
+					{:else}
+						<button
+							class="play-button"
+							data-current={$nowPlaying?.song?.title === song.title}
+							type="button"
+							on:click={() => ($nowPlaying = { song, isPlaying: true })}
+							alt="Play {song.title} by {song.artist}"
+							data-testid="song-table-play-button"
+						>
+							<img src={play} alt="Play" width="12" height="16" />
+						</button>
+					{/if}
 				</td>
 				{#each columns as column}
-					<td>
+					<td data-testid="song-table-cell-{column}">
 						{#if column === 'cover'}
 							<img src={song.coverUrl} class="cover" alt="Album cover of {song.title}" />
 						{:else if column === 'duration'}
@@ -94,6 +120,7 @@
 		@apply pr-6;
 	}
 
+	.pause-button,
 	.play-button {
 		@apply mr-2 py-3 pl-6 pr-3 flex items-center justify-center h-[1.25rem];
 	}
