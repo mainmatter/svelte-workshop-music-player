@@ -1,0 +1,37 @@
+{
+	"slug": "monsters-of-dubstep-vol-2",
+	"id": 5,
+	"duration": 503000,
+	"name": "Monsters of Dubstep (Vol. 2)",
+	"artist": "Figure",
+	"coverUrl": "https://i1.sndcdn.com/artworks-000012984589-nrck3r-t500x500.jpg",
+	"songs": [
+		{
+			"id": "13",
+			"title": "Boogie Man",
+			"soundcloudTrackId": 26011098,
+			"duration": 224000,
+			"artist": "Figure",
+			"album": "Monsters of Dubstep (Vol. 2)",
+			"coverUrl": "https://i1.sndcdn.com/artworks-000012984589-nrck3r-t500x500.jpg"
+		},
+		{
+			"id": "14",
+			"title": "The Werewolf (VIP)",
+			"soundcloudTrackId": 26011324,
+			"duration": 216000,
+			"artist": "Figure",
+			"album": "Monsters of Dubstep (Vol. 2)",
+			"coverUrl": "https://i1.sndcdn.com/artworks-000012984589-nrck3r-t500x500.jpg"
+		},
+		{
+			"id": "15",
+			"title": "The Monsters Revenge",
+			"soundcloudTrackId": 26015963,
+			"duration": 63000,
+			"artist": "Figure",
+			"album": "Monsters of Dubstep (Vol. 2)",
+			"coverUrl": "https://i1.sndcdn.com/artworks-000012984589-nrck3r-t500x500.jpg"
+		}
+	]
+}

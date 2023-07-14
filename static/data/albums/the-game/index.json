@@ -1,0 +1,37 @@
+{
+	"slug": "the-game",
+	"id": 4,
+	"duration": 589000,
+	"name": "The Game",
+	"coverUrl": "https://i1.sndcdn.com/artworks-e40dd921-38e2-4119-99c3-ead502248fee-0-t500x500.jpg",
+	"artist": "Queen",
+	"songs": [
+		{
+			"id": "10",
+			"title": "Play The Game",
+			"soundcloudTrackId": 252514890,
+			"duration": 212000,
+			"artist": "Queen",
+			"album": "The Game",
+			"coverUrl": "https://i1.sndcdn.com/artworks-e40dd921-38e2-4119-99c3-ead502248fee-0-t500x500.jpg"
+		},
+		{
+			"id": "11",
+			"title": "Another One Bites The Dust",
+			"soundcloudTrackId": 252515196,
+			"duration": 214000,
+			"artist": "Queen",
+			"album": "The Game",
+			"coverUrl": "https://i1.sndcdn.com/artworks-e40dd921-38e2-4119-99c3-ead502248fee-0-t500x500.jpg"
+		},
+		{
+			"id": "12",
+			"title": "Crazy Little Thing Called Love",
+			"soundcloudTrackId": 252515267,
+			"duration": 163000,
+			"artist": "Queen",
+			"album": "The Game",
+			"coverUrl": "https://i1.sndcdn.com/artworks-e40dd921-38e2-4119-99c3-ead502248fee-0-t500x500.jpg"
+		}
+	]
+}

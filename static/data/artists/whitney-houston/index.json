@@ -1,0 +1,43 @@
+{
+	"slug": "whitney-houston",
+	"id": 1,
+	"name": "Whitney Houston",
+	"albums": [
+		{
+			"slug": "whitney",
+			"id": 1,
+			"duration": 844000,
+			"name": "Whitney",
+			"coverUrl": "https://i1.sndcdn.com/artworks-Oc8kZScmrZ3W-0-t500x500.jpg",
+			"songs": [
+				{
+					"id": "1",
+					"title": "I Wanna Dance with Somebody (Who Loves Me)",
+					"soundcloudTrackId": 253799714,
+					"duration": 291000,
+					"artist": "Whitney Houston",
+					"album": "Whitney",
+					"coverUrl": "https://i1.sndcdn.com/artworks-Oc8kZScmrZ3W-0-t500x500.jpg"
+				},
+				{
+					"id": "2",
+					"title": "So Emotional",
+					"soundcloudTrackId": 253799732,
+					"duration": 276000,
+					"artist": "Whitney Houston",
+					"album": "Whitney",
+					"coverUrl": "https://i1.sndcdn.com/artworks-Oc8kZScmrZ3W-0-t500x500.jpg"
+				},
+				{
+					"id": "3",
+					"title": "Where Do Broken Hearts Go",
+					"soundcloudTrackId": 253799718,
+					"duration": 277000,
+					"artist": "Whitney Houston",
+					"album": "Whitney",
+					"coverUrl": "https://i1.sndcdn.com/artworks-Oc8kZScmrZ3W-0-t500x500.jpg"
+				}
+			]
+		}
+	]
+}

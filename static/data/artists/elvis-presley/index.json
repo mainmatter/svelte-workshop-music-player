@@ -1,0 +1,43 @@
+{
+	"slug": "elvis-presley",
+	"id": 3,
+	"name": "Elvis Presley",
+	"albums": [
+		{
+			"slug": "just-because",
+			"id": 3,
+			"duration": 424000,
+			"name": "Just Because",
+			"coverUrl": "https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg",
+			"songs": [
+				{
+					"id": "7",
+					"title": "Tutti Frutti",
+					"soundcloudTrackId": 1307615035,
+					"duration": 121000,
+					"artist": "Elvis Presley",
+					"album": "Just Because",
+					"coverUrl": "https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg"
+				},
+				{
+					"id": "8",
+					"title": "Hound Dog",
+					"soundcloudTrackId": 1307614222,
+					"duration": 136000,
+					"artist": "Elvis Presley",
+					"album": "Just Because",
+					"coverUrl": "https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg"
+				},
+				{
+					"id": "9",
+					"title": "Love Me Tender",
+					"soundcloudTrackId": 1307613757,
+					"duration": 167000,
+					"artist": "Elvis Presley",
+					"album": "Just Because",
+					"coverUrl": "https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg"
+				}
+			]
+		}
+	]
+}
