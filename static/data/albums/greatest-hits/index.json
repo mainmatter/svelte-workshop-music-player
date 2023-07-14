@@ -1,0 +1,28 @@
+{
+	"slug": "greatest-hits",
+	"id": 6,
+	"duration": 398000,
+	"artist": "Queen",
+	"name": "Greatest Hits",
+	"coverUrl": "https://i1.sndcdn.com/artworks-0594d6b29566c9686580e8d3560d253d1bc868d3-0-t500x500.jpg",
+	"songs": [
+		{
+			"id": "16",
+			"title": "Killer Queen",
+			"soundcloudTrackId": 252514617,
+			"artist": "Queen",
+			"duration": 179000,
+			"album": "Greatest Hits",
+			"coverUrl": "https://i1.sndcdn.com/artworks-0594d6b29566c9686580e8d3560d253d1bc868d3-0-t500x500.jpg"
+		},
+		{
+			"id": "17",
+			"title": "Don't Stop Me Now",
+			"soundcloudTrackId": 252516215,
+			"duration": 219000,
+			"artist": "Queen",
+			"album": "Greatest Hits",
+			"coverUrl": "https://i1.sndcdn.com/artworks-0594d6b29566c9686580e8d3560d253d1bc868d3-0-t500x500.jpg"
+		}
+	]
+}

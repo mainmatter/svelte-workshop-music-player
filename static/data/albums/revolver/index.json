@@ -1,0 +1,37 @@
+{
+	"slug": "revolver",
+	"id": 2,
+	"duration": 527000,
+	"name": "Revolver",
+	"coverUrl": "https://upload.wikimedia.org/wikipedia/en/e/ec/Revolver_%28album_cover%29.jpg?20201229172719",
+	"artist": "The Beatles",
+	"songs": [
+		{
+			"id": "4",
+			"title": "Eleonor Rigby",
+			"soundcloudTrackId": 340497185,
+			"duration": 127000,
+			"artist": "The Beatles",
+			"album": "Revolver",
+			"coverUrl": "https://upload.wikimedia.org/wikipedia/en/e/ec/Revolver_%28album_cover%29.jpg?20201229172719"
+		},
+		{
+			"id": "5",
+			"title": "Something",
+			"soundcloudTrackId": 340497183,
+			"duration": 186000,
+			"artist": "The Beatles",
+			"album": "Revolver",
+			"coverUrl": "https://upload.wikimedia.org/wikipedia/en/e/ec/Revolver_%28album_cover%29.jpg?20201229172719"
+		},
+		{
+			"id": "6",
+			"title": "Oh! Darling",
+			"soundcloudTrackId": 340497184,
+			"duration": 214000,
+			"artist": "The Beatles",
+			"album": "Revolver",
+			"coverUrl": "https://upload.wikimedia.org/wikipedia/en/e/ec/Revolver_%28album_cover%29.jpg?20201229172719"
+		}
+	]
+}

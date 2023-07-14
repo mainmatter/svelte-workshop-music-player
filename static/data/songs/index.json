@@ -1,0 +1,155 @@
+[
+	{
+		"id": "1",
+		"title": "I Wanna Dance with Somebody (Who Loves Me)",
+		"soundcloudTrackId": 253799714,
+		"duration": 291000,
+		"artist": "Whitney Houston",
+		"album": "Whitney",
+		"coverUrl": "https://i1.sndcdn.com/artworks-Oc8kZScmrZ3W-0-t500x500.jpg"
+	},
+	{
+		"id": "2",
+		"title": "So Emotional",
+		"soundcloudTrackId": 253799732,
+		"duration": 276000,
+		"artist": "Whitney Houston",
+		"album": "Whitney",
+		"coverUrl": "https://i1.sndcdn.com/artworks-Oc8kZScmrZ3W-0-t500x500.jpg"
+	},
+	{
+		"id": "3",
+		"title": "Where Do Broken Hearts Go",
+		"soundcloudTrackId": 253799718,
+		"duration": 277000,
+		"artist": "Whitney Houston",
+		"album": "Whitney",
+		"coverUrl": "https://i1.sndcdn.com/artworks-Oc8kZScmrZ3W-0-t500x500.jpg"
+	},
+	{
+		"id": "4",
+		"title": "Eleonor Rigby",
+		"soundcloudTrackId": 340497185,
+		"duration": 127000,
+		"artist": "The Beatles",
+		"album": "Revolver",
+		"coverUrl": "https://upload.wikimedia.org/wikipedia/en/e/ec/Revolver_%28album_cover%29.jpg?20201229172719"
+	},
+	{
+		"id": "5",
+		"title": "Something",
+		"soundcloudTrackId": 340497183,
+		"duration": 186000,
+		"artist": "The Beatles",
+		"album": "Revolver",
+		"coverUrl": "https://upload.wikimedia.org/wikipedia/en/e/ec/Revolver_%28album_cover%29.jpg?20201229172719"
+	},
+	{
+		"id": "6",
+		"title": "Oh! Darling",
+		"soundcloudTrackId": 340497184,
+		"duration": 214000,
+		"artist": "The Beatles",
+		"album": "Revolver",
+		"coverUrl": "https://upload.wikimedia.org/wikipedia/en/e/ec/Revolver_%28album_cover%29.jpg?20201229172719"
+	},
+	{
+		"id": "7",
+		"title": "Tutti Frutti",
+		"soundcloudTrackId": 1307615035,
+		"duration": 121000,
+		"artist": "Elvis Presley",
+		"album": "Just Because",
+		"coverUrl": "https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg"
+	},
+	{
+		"id": "8",
+		"title": "Hound Dog",
+		"soundcloudTrackId": 1307614222,
+		"duration": 136000,
+		"artist": "Elvis Presley",
+		"album": "Just Because",
+		"coverUrl": "https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg"
+	},
+	{
+		"id": "9",
+		"title": "Love Me Tender",
+		"soundcloudTrackId": 1307613757,
+		"duration": 167000,
+		"artist": "Elvis Presley",
+		"album": "Just Because",
+		"coverUrl": "https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg"
+	},
+	{
+		"id": "10",
+		"title": "Play The Game",
+		"soundcloudTrackId": 252514890,
+		"duration": 212000,
+		"artist": "Queen",
+		"album": "The Game",
+		"coverUrl": "https://i1.sndcdn.com/artworks-e40dd921-38e2-4119-99c3-ead502248fee-0-t500x500.jpg"
+	},
+	{
+		"id": "11",
+		"title": "Another One Bites The Dust",
+		"soundcloudTrackId": 252515196,
+		"duration": 214000,
+		"artist": "Queen",
+		"album": "The Game",
+		"coverUrl": "https://i1.sndcdn.com/artworks-e40dd921-38e2-4119-99c3-ead502248fee-0-t500x500.jpg"
+	},
+	{
+		"id": "12",
+		"title": "Crazy Little Thing Called Love",
+		"soundcloudTrackId": 252515267,
+		"duration": 163000,
+		"artist": "Queen",
+		"album": "The Game",
+		"coverUrl": "https://i1.sndcdn.com/artworks-e40dd921-38e2-4119-99c3-ead502248fee-0-t500x500.jpg"
+	},
+	{
+		"id": "13",
+		"title": "Boogie Man",
+		"soundcloudTrackId": 26011098,
+		"duration": 224000,
+		"artist": "Figure",
+		"album": "Monsters of Dubstep (Vol. 2)",
+		"coverUrl": "https://i1.sndcdn.com/artworks-000012984589-nrck3r-t500x500.jpg"
+	},
+	{
+		"id": "14",
+		"title": "The Werewolf (VIP)",
+		"soundcloudTrackId": 26011324,
+		"duration": 216000,
+		"artist": "Figure",
+		"album": "Monsters of Dubstep (Vol. 2)",
+		"coverUrl": "https://i1.sndcdn.com/artworks-000012984589-nrck3r-t500x500.jpg"
+	},
+	{
+		"id": "15",
+		"title": "The Monsters Revenge",
+		"soundcloudTrackId": 26015963,
+		"duration": 63000,
+		"artist": "Figure",
+		"album": "Monsters of Dubstep (Vol. 2)",
+		"coverUrl": "https://i1.sndcdn.com/artworks-000012984589-nrck3r-t500x500.jpg"
+	},
+	{
+		"id": "16",
+		"title": "Killer Queen",
+		"soundcloudTrackId": 252514617,
+		"duration": 179000,
+		"artist": "Queen",
+		"album": "Greatest Hits",
+		"coverUrl": "https://i1.sndcdn.com/artworks-0594d6b29566c9686580e8d3560d253d1bc868d3-0-t500x500.jpg"
+	},
+	{
+		"id": "17",
+		"title": "Don't Stop Me Now",
+		"soundcloudTrackId": 252516215,
+		"duration": 219000,
+		"artist": "Queen",
+		"album": "Greatest Hits",
+		"coverUrl": "https://i1.sndcdn.com/artworks-0594d6b29566c9686580e8d3560d253d1bc868d3-0-t500x500.jpg"
+	}
+]
