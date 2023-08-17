@@ -35,18 +35,63 @@ describe('<SongTable>', () => {
 
 		let columns = screen.queryAllByTestId(/song-table-th-.+/);
 		let rows = screen.queryAllByTestId('song-table-row');
+
+		expect(columns, 'All 4 column headings are rendered').toHaveLength(4);
+		expect(rows, 'There are no rows to render').toHaveLength(0);
 	});
 
 	it('renders a list of songs', () => {
 		render(SongTable, { songs });
 
 		let rows = screen.queryAllByTestId('song-table-row');
+
+		expect(rows, '2 rows are rendered').toHaveLength(2);
+
+		for (let cell of screen.getAllByTestId('song-table-cell-controls')) {
+			expect(cell).toContainElement(cell.querySelector('button.play-button'));
+		}
 	});
 
 	it('pressing the play & pause buttons update the store', async () => {
 		render(SongTable, { songs });
 
+		expect(get(nowPlaying)).toBe(null);
+		expect(screen.queryAllByTestId('song-table-pause-button')).toMatchObject([]);
+
 		let [playButton] = screen.getAllByTestId('song-table-play-button');
 
+		await fireEvent.click(playButton);
+
+		expect(screen.getAllByTestId('song-table-pause-button')).toHaveLength(1);
+		expect(get(nowPlaying)).toMatchObject({
+			isPlaying: true,
+			song: {
+				id: '9',
+				title: 'Love Me Tender',
+				soundcloudTrackId: 1307613757,
+				duration: 167000,
+				artist: 'Elvis Presley',
+				album: 'Just Because',
+				coverUrl:
+					'https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg'
+			}
+		});
+
+		await fireEvent.click(screen.getByTestId('song-table-pause-button'));
+
+		expect(screen.getAllByTestId('song-table-play-button')).toHaveLength(2);
+		expect(get(nowPlaying)).toMatchObject({
+			isPlaying: false,
+			song: {
+				id: '9',
+				title: 'Love Me Tender',
+				soundcloudTrackId: 1307613757,
+				duration: 167000,
+				artist: 'Elvis Presley',
+				album: 'Just Because',
+				coverUrl:
+					'https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg'
+			}
+		});
 	});
 });
