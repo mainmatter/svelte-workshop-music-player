@@ -8,6 +8,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$data: path.resolve('./static/data'),
+			$utils: path.resolve('./src/utils'),
 		},
 	},
 	preprocess: vitePreprocess({
