@@ -1,11 +1,8 @@
 <script>
-	import PrimaryNav from '$lib/global/primary-nav.svelte';
 	import Boxes from './boxes.svelte';
 
 	let name = 'Billy Bloggs';
 </script>
-
-<PrimaryNav />
 
 <section>
 	<p class="title">Cybernetically enhanced playback</p>
