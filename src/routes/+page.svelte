@@ -1,5 +1,9 @@
+<script>
+	let name = 'Billy Bloggs';
+</script>
+
 <h1>Welcome to The Svelte Music Player</h1>
 
 <p>
-	Billy Bloggs, it's great to see you again!
+	{name}, it's great to see you again!
 </p>
