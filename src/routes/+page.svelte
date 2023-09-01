@@ -1,14 +1,21 @@
 <script>
+	import PrimaryNav from '$lib/global/primary-nav.svelte';
+	import Boxes from './boxes.svelte';
+
 	let name = 'Billy Bloggs';
 </script>
 
-<!-- Put PrimaryNav here -->
+<PrimaryNav />
 
 <section>
 	<p class="title">Cybernetically enhanced playback</p>
 	<p>Just for you, {name}</p>
 
-	<!-- Put Boxes here -->
+	<Boxes>
+		<div slot="box1">Play your music</div>
+		<div slot="box2">No actual content</div>
+		<div slot="box3">Just a demo</div>
+	</Boxes>
 </section>
 
 <style lang="postcss">

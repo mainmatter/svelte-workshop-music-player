@@ -1,5 +1,5 @@
 <nav>
-	Sveltekit Music Player
+	<a href="/">Sveltekit Music Player</a>
 </nav>
 
 <style lang="postcss">

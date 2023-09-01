@@ -20,14 +20,14 @@
 </script>
 
 <div class="box-container">
-	<button style="background:{color1}" type="button">
-		<!--  -->
+	<button style="background:{color1}" type="button" on:click={() => shuffleColor(0)}>
+		<slot name="box1" />
 	</button>
-	<button style:background={color2} type="button">
-		<!--  -->
+	<button style:background={color2} type="button" on:click={() => shuffleColor(1)}>
+		<slot name="box2" />
 	</button>
-	<button style:background={color3} type="button">
-		<!--  -->
+	<button style:background={color3} type="button" on:click={() => shuffleColor(2)}>
+		<slot name="box3" />
 	</button>
 </div>
 
