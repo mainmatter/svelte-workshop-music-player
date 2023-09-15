@@ -1,12 +1,12 @@
 <script>
 	import Boxes from './boxes.svelte';
 
-	let name = 'Billy Bloggs';
+	export let data;
 </script>
 
 <section>
 	<p class="title">Cybernetically enhanced playback</p>
-	<p>Just for you, {name}</p>
+	<p>Just for you, {data.name}</p>
 
 	<Boxes>
 		<div slot="box1">Play your music</div>
