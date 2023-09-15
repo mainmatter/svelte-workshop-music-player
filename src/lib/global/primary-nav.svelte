@@ -1,10 +1,10 @@
 <nav>
 	<ul class="flex nav-list">
 		<li>
-			About
+			<a href="/about">About</a>
 		</li>
 		<li>
-			Library
+			<a href="/library">Library</a>
 		</li>
 	</ul>
 </nav>
