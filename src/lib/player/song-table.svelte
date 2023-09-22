@@ -33,7 +33,7 @@
 		{#each songs as song}
 			<tr data-testid="song-table-row">
 				<td class="play" data-testid="song-table-cell-controls">
-					<button class="play-button" type="button">
+					<button class="play-button" type="button" data-testid="song-table-play-button">
 						<img src={play} alt="Play" width="12" height="16" />
 					</button>
 				</td>

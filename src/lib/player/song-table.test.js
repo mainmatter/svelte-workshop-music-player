@@ -34,7 +34,8 @@ describe('<SongTable>', () => {
 		let columns = screen.queryAllByTestId(/song-table-th-.+/);
 		let rows = screen.queryAllByTestId('song-table-row');
 
-		expect(false).toBe(true);
+		expect(columns, 'All 4 column headings are rendered').toHaveLength(4);
+		expect(rows, 'There are no rows to render').toHaveLength(0);
 	});
 
 	it('renders a list of songs', () => {
@@ -42,12 +43,14 @@ describe('<SongTable>', () => {
 
 		let rows = screen.queryAllByTestId('song-table-row');
 
-		expect(false).toBe(true);
+		expect(rows, '2 rows are rendered').toHaveLength(2);
 	});
 
 	it('each row has a play button', async () => {
 		render(SongTable, { songs });
 
 		let playButtons = screen.getAllByTestId('song-table-play-button');
+
+		expect(playButtons).toHaveLength(2);
 	});
 });
