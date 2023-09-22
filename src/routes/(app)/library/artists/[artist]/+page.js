@@ -3,6 +3,6 @@ export async function load({ params: { artist }, fetch }) {
 	const artistData = await response.json();
 
 	return {
-		artist: artistData
+		artist: artistData,
 	};
 }
