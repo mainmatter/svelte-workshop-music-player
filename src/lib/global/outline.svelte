@@ -8,6 +8,9 @@
 			><img alt="Svelte" src={logo} width="22" height="24" /> Music</a
 		>
 		<slot name="nav" />
+		<div name="time">
+			<!-- display time -->
+		</div>
 		<slot name="user" />
 	</header>
 
@@ -28,7 +31,7 @@
 	.top {
 		@apply bg-white text-zinc-600 shadow-md sticky top-0 grid z-10;
 
-		grid-template: 'logo nav user' 1fr / theme('width.72') 1fr min-content;
+		grid-template: 'logo nav time user' 1fr / theme('width.72') 1fr min-content min-content;
 	}
 
 	.top > :global(*) {

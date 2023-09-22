@@ -9,6 +9,7 @@ const config = {
 		alias: {
 			$data: path.resolve('./static/data'),
 			$utils: path.resolve('./src/utils'),
+			$store: path.resolve('./src/store'),
 		},
 	},
 	preprocess: vitePreprocess({
