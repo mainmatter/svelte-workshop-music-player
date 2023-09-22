@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { authenticateAs } from './test-helpers';
 
-test('follows the nav links', async ({ page }) => {
+test('follows the nav links', async ({ page, context }) => {
+	await authenticateAs(context);
 	await page.goto('/');
 	await page.getByRole('link', { name: 'Library' }).click();
 
@@ -11,13 +13,15 @@ test('follows the nav links', async ({ page }) => {
 	await expect(page, 'the albums URL is visited').toHaveURL('/library/albums');
 });
 
-test('/library redirects to /library/songs', async ({ page }) => {
+test('/library redirects to /library/songs', async ({ page, context }) => {
+	await authenticateAs(context);
 	await page.goto('/library');
 
 	await expect(page, 'the page is redirected').toHaveURL('/library/songs');
 });
 
-test('renders the albums page', async ({ page }) => {
+test('renders the albums page', async ({ page, context }) => {
+	await authenticateAs(context);
 	await page.goto('/library/albums');
 
 	await expect(
@@ -26,7 +30,8 @@ test('renders the albums page', async ({ page }) => {
 	).toHaveCount(6);
 });
 
-test('follows the album link', async ({ page }) => {
+test('follows the album link', async ({ page, context }) => {
+	await authenticateAs(context);
 	await page.goto('/library/albums');
 
 	await page
@@ -38,7 +43,8 @@ test('follows the album link', async ({ page }) => {
 	await expect(page).toHaveURL('/library/albums/whitney');
 });
 
-test('renders the album', async ({ page }) => {
+test('renders the album', async ({ page, context }) => {
+	await authenticateAs(context);
 	await page.goto('/library/albums/whitney');
 
 	await expect(
@@ -52,7 +58,8 @@ test('renders the album', async ({ page }) => {
 	).toBeVisible();
 });
 
-test('plays the song', async ({ page }) => {
+test('plays the song', async ({ page, context }) => {
+	await authenticateAs(context);
 	await page.goto('/library/songs');
 
 	await expect(page.getByTestId('nowplaying-iframe')).toBeHidden();
