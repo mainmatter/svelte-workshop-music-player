@@ -1,4 +1,4 @@
-import { derived, readable } from 'svelte/store';
+import { derived, readable, writable } from 'svelte/store';
 
 const pad = (value) => value.toString().padStart(2, '0');
 const formatDate = (date) =>
@@ -19,3 +19,5 @@ export const time = derived(now, ($now) => {
 
 	return '';
 });
+
+export const nowPlaying = writable(null);

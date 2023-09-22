@@ -1,6 +1,8 @@
 <script>
 	import { formatDuration } from '$utils/format-duration';
 	import { kebabCase } from 'lodash-es';
+	import { nowPlaying } from '$store';
+	import pause from '$lib/assets/pause.svg';
 	import play from '$lib/assets/play.svg';
 
 	export let songs;
@@ -18,6 +20,11 @@
 		album: 'Album',
 		duration: 'Duration',
 	};
+
+	const pauseSong = () =>
+		nowPlaying.update((nowPlaying) => {
+			return { ...nowPlaying, isPlaying: false };
+		});
 </script>
 
 <table class="table">
@@ -33,9 +40,28 @@
 		{#each songs as song}
 			<tr data-testid="song-table-row">
 				<td class="play" data-testid="song-table-cell-controls">
-					<button class="play-button" type="button" data-testid="song-table-play-button">
-						<img src={play} alt="Play" width="12" height="16" />
-					</button>
+					{#if $nowPlaying?.song?.title === song.title && $nowPlaying.isPlaying}
+						<button
+							class="play-button"
+							type="button"
+							on:click={pauseSong}
+							alt="Pause {song.title} by {song.artist}"
+							data-testid="song-table-pause-button"
+						>
+							<img src={pause} alt="Pause" width="12" height="16" />
+						</button>
+					{:else}
+						<button
+							class="play-button"
+							data-current={$nowPlaying?.song?.title === song.title}
+							type="button"
+							on:click={() => ($nowPlaying = { song, isPlaying: true })}
+							alt="Play {song.title} by {song.artist}"
+							data-testid="song-table-play-button"
+						>
+							<img src={play} alt="Play" width="12" height="16" />
+						</button>
+					{/if}
 				</td>
 				{#each columns as column}
 					<td data-testid="song-table-cell-{column}">
