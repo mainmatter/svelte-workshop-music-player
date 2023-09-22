@@ -1,5 +1,6 @@
 <script>
 	import logo from '$lib/assets/logo.svg';
+	import { time } from '$store';
 </script>
 
 <div class="outline">
@@ -9,7 +10,7 @@
 		>
 		<slot name="nav" />
 		<div name="time">
-			<!-- display time -->
+			{$time}
 		</div>
 		<slot name="user" />
 	</header>
