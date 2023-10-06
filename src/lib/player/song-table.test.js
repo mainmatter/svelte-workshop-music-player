@@ -1,6 +1,9 @@
 import '@testing-library/jest-dom';
 import { expect, describe, it } from 'vitest';
-import { render, screen } from '@testing-library/svelte';
+import { render, screen, fireEvent } from '@testing-library/svelte';
+
+import { nowPlaying } from '$store';
+import { get } from 'svelte/store';
 
 import SongTable from './song-table.svelte';
 
@@ -52,5 +55,48 @@ describe('<SongTable>', () => {
 		let playButtons = screen.getAllByTestId('song-table-play-button');
 
 		expect(playButtons).toHaveLength(2);
+	});
+
+	it('pressing the play & pause buttons update the store', async () => {
+		render(SongTable, { songs });
+
+		expect(get(nowPlaying)).toBe(null);
+		expect(screen.queryAllByTestId('song-table-pause-button')).toMatchObject([]);
+
+		let [playButton] = screen.getAllByTestId('song-table-play-button');
+
+		await fireEvent.click(playButton);
+
+		expect(screen.getAllByTestId('song-table-pause-button')).toHaveLength(1);
+		expect(get(nowPlaying)).toMatchObject({
+			isPlaying: true,
+			song: {
+				id: '9',
+				title: 'Love Me Tender',
+				soundcloudTrackId: 1307613757,
+				duration: 167000,
+				artist: 'Elvis Presley',
+				album: 'Just Because',
+				coverUrl:
+					'https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg',
+			},
+		});
+
+		await fireEvent.click(screen.getByTestId('song-table-pause-button'));
+
+		expect(screen.getAllByTestId('song-table-play-button')).toHaveLength(2);
+		expect(get(nowPlaying)).toMatchObject({
+			isPlaying: false,
+			song: {
+				id: '9',
+				title: 'Love Me Tender',
+				soundcloudTrackId: 1307613757,
+				duration: 167000,
+				artist: 'Elvis Presley',
+				album: 'Just Because',
+				coverUrl:
+					'https://i1.sndcdn.com/artworks-9c0e3b24-84c1-4185-978d-b3733e09ea9d-0-t500x500.jpg',
+			},
+		});
 	});
 });
