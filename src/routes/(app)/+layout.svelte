@@ -13,7 +13,9 @@
 
 	<div slot="user">
 		{#if data.isAuthenticated}
-			<!-- Logout -->
+			<form action="/logout" method="POST">
+				<button type="submit">Logout</button>
+			</form>
 		{/if}
 	</div>
 

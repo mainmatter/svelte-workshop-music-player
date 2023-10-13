@@ -1,4 +1,4 @@
 /** @type {import('./$types').LayoutServerLoad} */
-export async function load({}) {
-	return { isAuthenticated: false };
+export async function load({ locals }) {
+	return { isAuthenticated: Boolean(locals.user) };
 }
