@@ -1,6 +1,18 @@
 <script>
 	import SongTable from '$lib/player/song-table.svelte';
+	import { enhance } from '$app/forms';
 	export let data;
+	export let form;
+
+	const formatTime = (timeStamp) => {
+		let time = new Date(timeStamp);
+		const day = time.getDate(),
+			month = time.getMonth(),
+			year = time.getFullYear(),
+			hours = time.getHours(),
+			minutes = time.getMinutes();
+		return `${hours}:${minutes} on ${day}/${month}/${year}`;
+	};
 </script>
 
 <div class="page-content">
@@ -21,6 +33,43 @@
 		{/each}
 	</div>
 </div>
+
+<section class="flex flex-col gap-3 mt-12">
+	<div class="px-8 py-3 rounded-lg bg-white">
+		<div class="flex text-zinc-500 mb-3 text-sm">
+			<h3>USER said</h3>
+			<p class="ml-auto text-right">formatTime(TIMESTAMP)</p>
+		</div>
+		<p>COMMENT</p>
+	</div>
+
+	{#if form?.success}
+		<div
+			class="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3 rounded-lg"
+			role="alert"
+		>
+			<p>Comment successfully added.</p>
+		</div>
+	{:else if form?.failure}
+		<p>{form.error.message}</p>
+	{/if}
+
+	<form class="px-8 py-5 rounded-lg bg-zinc-100" method="POST">
+		<input type="hidden" name="artistSlug" value={data.artist.slug} />
+		<p>
+			<label class="block" for="comment">Comment</label>
+			<textarea
+				id="comment"
+				cols="30"
+				rows="3"
+				class="p-2 border-2 border-zinc-300 rounded-md w-full min-h-[5rem]"
+			/>
+		</p>
+		<p>
+			<button type="submit" class="p-2 px-4 bg-white rounded-lg shadow">Post comment</button>
+		</p>
+	</form>
+</section>
 
 <style lang="postcss">
 	.cover {
