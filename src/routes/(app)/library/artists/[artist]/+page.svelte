@@ -35,13 +35,17 @@
 </div>
 
 <section class="flex flex-col gap-3 mt-12">
-	<div class="px-8 py-3 rounded-lg bg-white">
-		<div class="flex text-zinc-500 mb-3 text-sm">
-			<h3>USER said</h3>
-			<p class="ml-auto text-right">formatTime(TIMESTAMP)</p>
+	{#each data.comments ?? [] as comment}
+		<div class="px-8 py-3 rounded-lg bg-white">
+			<div class="flex text-zinc-500 mb-3 text-sm">
+				<h3>{comment.user} said</h3>
+				<p class="ml-auto text-right">{formatTime(comment.timeStamp)}</p>
+			</div>
+			<p>
+				{comment.comment}
+			</p>
 		</div>
-		<p>COMMENT</p>
-	</div>
+	{/each}
 
 	{#if form?.success}
 		<div
@@ -54,11 +58,12 @@
 		<p>{form.error.message}</p>
 	{/if}
 
-	<form class="px-8 py-5 rounded-lg bg-zinc-100" method="POST">
+	<form class="px-8 py-5 rounded-lg bg-zinc-100" action="?/addComment" method="POST" use:enhance>
 		<input type="hidden" name="artistSlug" value={data.artist.slug} />
 		<p>
 			<label class="block" for="comment">Comment</label>
 			<textarea
+				name="comment"
 				id="comment"
 				cols="30"
 				rows="3"
