@@ -1,38 +1,11 @@
-# create-svelte
+# Svelte & SvelteKit Workshop
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This repository contains the sample projects for Mainmatter' Svelte & SvelteKit workshop.
 
-## Creating a project
+> [!NOTE]
+> This workshop has been written by [Mainmatter](https://mainmatter.com/).  
+> It's one of the trainings in [our portfolio of workshops](https://mainmatter.com/services/workshops/).  
+> We also offer consulting, training, and team augmentation for Svelte – check out our [website](https://mainmatter.com/svelte-consulting/) to learn more!
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Copyright &copy; 2015-2019 [Mainmatter GmbH](http://mainmatter.com); released under
+the Attribution NonCommercial ShareAlike 3.0 Unported license.
