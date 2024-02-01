@@ -27,6 +27,7 @@
 		"eslint-plugin-svelte3": "^4.0.0",
 		"jsdom": "^22.1.0",
 		"lodash-es": "^4.17.21",
+		"msw": "^2.1.5",
 		"postcss": "^8.4.33",
 		"prettier": "^3.2.4",
 		"prettier-plugin-svelte": "^3.1.2",
@@ -38,5 +39,8 @@
 		"vite-plugin-svelte-svg": "^2.3.0",
 		"vitest": "^1.2.2"
 	},
-	"type": "module"
+	"type": "module",
+	"msw": {
+		"workerDirectory": "static"
+	}
 }
