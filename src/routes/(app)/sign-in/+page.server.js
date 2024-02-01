@@ -3,7 +3,7 @@ import { redirect, fail } from '@sveltejs/kit';
 /** @type {import('./$types').LayoutServerLoad} */
 export function load({ locals }) {
 	if (locals.user) {
-		throw redirect(307, '/library');
+		redirect(307, '/library');
 	}
 }
 
@@ -18,8 +18,8 @@ export const actions = {
 			return fail(401, { detail: 'incorrect password' });
 		}
 
-		cookies.set('user', username);
+		cookies.set('user', username, {path: "/"});
 
-		throw redirect(303, '/library');
+		redirect(303, '/library');
 	},
 };

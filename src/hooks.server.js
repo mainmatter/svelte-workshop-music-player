@@ -9,7 +9,7 @@ export async function handle({ event, resolve }) {
 	}
 
 	if (event.route.id.includes('/library') && !user) {
-		throw redirect(307, '/sign-in');
+		redirect(307, '/sign-in');
 	}
 
 	const response = await resolve(event);
