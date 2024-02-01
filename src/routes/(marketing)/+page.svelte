@@ -4,6 +4,8 @@
 	export let data;
 </script>
 
+<pre>{JSON.stringify(data.products, null, '\t')}</pre>
+
 <section>
 	<p class="title">Cybernetically enhanced playback</p>
 	<p>Just for you, {data.name}</p>

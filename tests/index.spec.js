@@ -11,6 +11,12 @@ test('renders the index page with expected elements', async ({ page }) => {
 	await expect(page.getByRole('button', { name: 'Just a demo' })).toBeVisible();
 });
 
+test('show our favorite product', async ({ page }) => {
+	await page.goto('/');
+
+	await expect(page.getByText('A fantastic ice cream')).toBeVisible();
+});
+
 test('clicking on each square changes its color', async ({ page }) => {
 	let getColor = (element) => getComputedStyle(element).backgroundColor;
 
