@@ -18,7 +18,7 @@ export const actions = {
 			return fail(401, { detail: 'incorrect password' });
 		}
 
-		cookies.set('user', username, {path: "/"});
+		cookies.set('user', username, { path: '/' });
 
 		redirect(303, '/library');
 	},
